@@ -9,14 +9,30 @@ public class Point {
       this.y = y;
     }
     
+    public int getX () {
+      return x; 
+    }
+    
+    public int getY() {
+      return y;
+    }
+
     // Returns distance between this Point object and another Point object
     public double distanceTo(Point other) {
-      /* IMPLEMENT ME */
+      double xVals = Math.pow((x - other.x), 2);
+      double yVals = Math.pow((y - other.y), 2);
+      double distance = Math.sqrt(xVals + yVals);
+      return distance;
     }
   
     // Returns a string in the format: (x, y)
     public String pointInfo() {
-      /* IMPLEMENT ME */
+      return "(" + x + ", " + y + ")";
+    }
+
+    public void incrementPoint(int val) {
+      x += val;
+      y += val;
     }
   }
   
